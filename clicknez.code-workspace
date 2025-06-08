@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "clicknez-host"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "clicknez-runtime"
+		},
+		{
+			"path": "clicknez-runner"
+		}
+	],
+	"settings": {}
+}
