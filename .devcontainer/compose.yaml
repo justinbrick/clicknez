@@ -2,6 +2,7 @@ services:
   # The development container service
   dev:
     image: debian:latest
+    env_file: .env
   db:
     image: postgres:latest
     env_file: .env
