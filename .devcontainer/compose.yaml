@@ -1,11 +1,19 @@
 services:
   # The development container service
   dev:
-    image: debian:latest
-    env_file: .env
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspaces:cached
+    command: sleep infinity
+    env_file:
+      - .env
+    network_mode: service:db
   db:
     image: postgres:latest
-    env_file: .env
+    env_file:
+      - .env
     ports:
       - "5432:5432"
     volumes:
