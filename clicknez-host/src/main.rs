@@ -13,4 +13,9 @@ async fn main() {
     let router = axum::Router::new()
         .layer(axum::middleware::from_fn(auth::authenticate_request))
         .with_state(state);
+
+    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
+    axum::serve(listener, router)
+        .await
+        .unwrap();
 }
