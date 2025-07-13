@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "clicknez-host"
+			"path": "."
 		},
 		{
-			"path": "."
+			"path": "clicknez-host"
 		},
 		{
 			"path": "clicknez-runtime"
